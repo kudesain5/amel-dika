@@ -194,7 +194,7 @@ body {
 
 .slide-group img {
   width: 200px;
-  height: auto;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
   flex-shrink: 0;
