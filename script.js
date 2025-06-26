@@ -31,25 +31,11 @@ if (guest) {
   }
 }
 
-function showATM(name, bank, number) {
-  document.getElementById('atmName').textContent = name;
-  document.getElementById('atmBank').textContent = bank;
-  document.getElementById('atmNumber').textContent = number;
-  document.getElementById('atmModal').style.display = 'flex';
-  document.getElementById('atmNotif').textContent = '';
-}
-
-function hideATM() {
-  document.getElementById('atmModal').style.display = 'none';
-}
-
-function copyATM() {
-  const number = document.getElementById('atmNumber').textContent;
-  navigator.clipboard.writeText(number).then(() => {
-    document.getElementById('atmNotif').textContent = 'Nomor rekening berhasil disalin!';
-  });
-}
-
+function copyRek(id) {
+  const text = document.getElementById(id).textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    document.getElementById("copyNotif").textContent = "Nomor rekening berhasil disalin!";
+    setTimeout(() => document.getElementById("copyNotif").textContent = "", 3000);
   });
 }
 
