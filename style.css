@@ -334,74 +334,41 @@ body {
 
 .rekening {
   padding: 2rem;
+  background: #1b1b1b;
   text-align: center;
-}
-.atm-button {
-  background: #444;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  margin: 1rem 0.5rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.atm-button:hover {
-  background: #666;
-}
-.atm-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-}
-.atm-content {
-  background: #222;
-  padding: 2rem;
-  border-radius: 12px;
-  width: 320px;
-  max-width: 90%;
-  text-align: center;
-  color: #fff;
-  position: relative;
-  animation: fadeIn 0.4s ease;
-}
-.atm-card {
-  background: linear-gradient(135deg, #3f51b5, #1a237e);
-  border-radius: 15px;
-  padding: 1.5rem;
-  color: #fff;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-}
-.atm-bank {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-.atm-name {
-  font-size: 1rem;
-  margin-bottom: 0.2rem;
-}
-.atm-number {
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
-}
-.close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
 }
 
+.rekening h3 {
+  color: #f1c40f;
+  margin-bottom: 1rem;
+}
+
+.rekening-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.rekening-item {
+  background: #2c2c2c;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  color: #eee;
+  min-width: 220px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.rekening-item button {
+  background: #f1c40f;
+  border: none;
+  padding: 0.4rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #111;
+  font-weight: bold;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600&display=swap');
 
