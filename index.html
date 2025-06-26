@@ -160,25 +160,29 @@
     });
   </script>
 
-<section class="rekening">
-  <h3>Wedding Gift</h3>
-  <p>Tanpa mengurangi rasa hormat, bagi yang ingin memberikan tanda kasih dapat mengirimkan ke rekening berikut:</p>
-  <div class="rekening-list">
-    <div class="rekening-item">
-      <p><strong>Hesti Amelia</strong></p>
-      <p>BANK JAGO</p>
-      <p>No. Rekening: <span id="rek1">10414844355</span></p>
-      <button onclick="copyRek('rek1')">Salin</button>
-    </div>
-    <div class="rekening-item">
-      <p><strong>Farhandika Afriliansyah</strong></p>
-      <p>BANK JAGO</p>
-      <p>No. Rekening: <span id="rek2">103004280276</span></p>
-      <button onclick="copyRek('rek2')">Salin</button>
-    </div>
+<section id="amplop" class="rekening">
+      <h3>Wedding Gift</h3>
+      <p>Tanpa mengurangi rasa hormat, bagi yang ingin memberikan tanda kasih dapat mengirimkan ke rekening berikut:</p>
+
+      <div class="atm-cards">
+        <button class="atm-button" onclick="showATM('Hesti Amelia', 'Bank Jago', '10414844355')">Kartu ATM Amel</button>
+        <button class="atm-button" onclick="showATM('Farhandika Afriliansyah', 'Bank Jago', '103004280276')">Kartu ATM Dika</button>
+      </div>
+
+      <div id="atmModal" class="atm-modal">
+        <div class="atm-content">
+          <span class="close" onclick="hideATM()">&times;</span>
+          <div class="atm-card">
+            <div class="atm-bank" id="atmBank">BCA</div>
+            <div class="atm-name" id="atmName">Hesti Amelia</div>
+            <div class="atm-number" id="atmNumber">1234567890</div>
+            <button onclick="copyATM()">Salin Nomor</button>
+          </div>
+          <p id="atmNotif" style="margin-top: 1rem;"></p>
+        </div>
+      </div>
+    </section>
   </div>
-  <p id="copyNotif" style="margin-top: 1rem; color: #f1c40f;"></p>
-</section>
 
   <footer>
       <p>Amel & Dika © 2025</p>
